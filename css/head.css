@@ -1,0 +1,77 @@
+#nav .menus_items {
+    position: absolute;
+    width: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#nav .menus_items .menus_item:hover .menus_item_child{
+    display: flex;
+}
+
+/* 这里的2是代表导航栏的第二个元素，即有子菜单的元素，可以按自己需求修改 */
+.menus_items .menus_item:nth-child(2) .menus_item_child {
+    left: -65px;
+}
+
+/* 页头 */
+i.fas.fa-chevron-down {
+    display: none;
+}
+
+#nav .menus_items .menus_item {
+    display: inline;
+    padding: 0 0 0 .7rem;
+    margin: 3px 15px;
+    padding: .2rem .6rem .5rem .6rem !important;
+    box-shadow: var(--card-box-shadow);
+    border-radius: 10px;
+    transition: color .3s ease-out, transform .3s ease-out
+}
+
+#nav .site-page:not(.child):hover:after {
+    width: unset
+}
+
+#nav .menus_items .menus_item .menus_item_child li:hover {
+    margin: 0 auto;
+    border-radius: 12px;
+    background: var(--btn-bg)
+}
+
+#nav .menus_items .menus_item .menus_item_child {
+    padding: 6px 8px 8px 8px;
+    border-radius: 12px;
+    width: 150px;
+    background: var(--card-bg)
+}
+
+#menus .site-page:not(.child) span {
+    display: none
+}
+
+/* 页脚 */
+#footer {
+    background: var(--card-bg);
+}
+
+#footer-wrap {
+    padding-top: 12px;
+    height: 90px;
+    box-shadow: var(--card-box-shadow);
+    border-radius: 18px 18px 0 0;
+    color: var(--font-color);
+    position: relative;
+    text-align: center
+}
+
+#footer-wrap a {
+    color: var(--font-color)
+}
+
+#footer-wrap .icp-icon {
+    padding: 0 4px;
+    vertical-align: text-bottom;
+    max-height: 1.4em;
+    width: auto
+}
