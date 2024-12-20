@@ -29,3 +29,16 @@ function createtime() {
 setInterval(() => {
     createtime();
 }, 1000);
+
+// 发现有时会和当前页面重复，加一个判断
+// hexo.extend.generator.register('random', function (locals) {
+//     const config = hexo.config.random || {}
+//     const posts = []
+//     for (const post of locals.posts.data) {
+//         if (post.random !== false) posts.push(post.path)
+//     }
+//     return {
+//         path: config.path || 'zhheo/random.js',
+//         data: `var posts=${JSON.stringify(posts)};function toRandomPost(){window.open('/'+posts[Math.floor(Math.random() * posts.length)],"_self");};`
+//     }
+// })

@@ -1,3 +1,4 @@
+/*更改字体*/
 @font-face {
     font-family:'arzhu';
     src:url('../font/227.ttf'); /* 修改成你的字体 */
@@ -12,23 +13,25 @@ span#subtitle {
 a#site-name {
     font-family:arzhu!important
 }
+/**
+页脚颜色
+ */
+/*#footer {*/
+/*    background: rgba(154, 75, 33, 0.63);*/
+/*    color: #000;*/
+/*    border-top-right-radius: 20px;*/
+/*    border-top-left-radius: 20px;*/
+/*    backdrop-filter: saturate(100%) blur(5px)*/
+/*}*/
 
-#footer {
-    background: rgba(154, 75, 33, 0.63);
-    color: #000;
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
-    backdrop-filter: saturate(100%) blur(5px)
-}
+/*#footer::before {*/
+/*    background: rgb(126, 122, 122)*/
+/*}*/
 
-#footer::before {
-    background: rgb(126, 122, 122)
-}
+/*#footer #footer-wrap {*/
+/*    color: var(--font-color)*/
+/*}*/
 
-#footer #footer-wrap {
-    color: var(--font-color)
-}
-
-#footer #footer-wrap a {
-    color: var(--font-color)
-}
+/*#footer #footer-wrap a {*/
+/*    color: var(--font-color)*/
+/*}*/
