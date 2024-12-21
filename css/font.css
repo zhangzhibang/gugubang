@@ -1,7 +1,7 @@
 /*更改字体*/
 @font-face {
     font-family:'arzhu';
-    src:url('/font/227.ttf'); /* 修改成你的字体 */
+    src:url('/font/227.TTF'); /* 修改成你的字体 */
     font-display:swap
 }
 h1#site-title {
