@@ -81,7 +81,7 @@ function whenDOMReady() {
                 .toFixed(2);
         let c = document.getElementById("run-time");
         c && (c.innerHTML = `已稳定运行 ${l} 坤年 🏀`),
-            setTimeout(meuicat.runtime, 1e3);
+            setTimeout(null, 1e3);
 }
 
 whenDOMReady() // 打开网站先执行一次
