@@ -479,6 +479,343 @@ h6::before {
     width: 100%;
     background-color: rgba(0, 0, 0, .1);
 }
+/**
+文章卡片擦亮
+ */
+#recent-posts > .recent-post-item .post_cover {
+    position: relative;
+}
+#recent-posts>.recent-post-item .post_cover::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,.5);
+    content: '';
+    -webkit-transition: -webkit-transform .3s;
+    -moz-transition: -moz-transform .3s;
+    -o-transition: -o-transform .3s;
+    -ms-transition: -ms-transform .3s;
+    transition: transform .3s;
+    -webkit-transform: scale3d(2,1,1) rotate(60deg) translate3d(15%,-150%,0);
+    -moz-transform: scale3d(2,1,1) rotate(60deg) translate3d(15%,-150%,0);
+    -o-transform: scale3d(2,1,1) rotate(60deg) translate3d(15%,-150%,0);
+    -ms-transform: scale3d(2,1,1) rotate(60deg) translate3d(15%,-150%,0);
+    transform: scale3d(2,1,1) rotate(60deg) translate3d(15%,-150%,0);
+}
+#recent-posts>.recent-post-item .post_cover:hover::after {
+    -webkit-transform: scale3d(2,1,1) rotate(60deg) translate3d(0,130%,0);
+    -moz-transform: scale3d(2,1,1) rotate(60deg) translate3d(0,130%,0);
+    -o-transform: scale3d(2,1,1) rotate(60deg) translate3d(0,130%,0);
+    -ms-transform: scale3d(2,1,1) rotate(60deg) translate3d(0,130%,0);
+    transform: scale3d(2,1,1) rotate(60deg) translate3d(0,130%,0);
+}
+
+/* 分类带框 */
+.category-lists ul li {
+    display: flex;
+    width: fit-content;
+    font-size: 1.2em !important;
+    padding: 0.2em 0.5em;
+    background: #fff;
+    margin: 0.5em 0.5em;
+    border-radius: 12px;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    border: 1.5px solid #e3e8f7;
+    box-shadow: 0 8px 16px -4px #2c2d300c !important;
+    align-items: center;
+    font-size: 18px !important;
+}
+
+.category-lists .category-list {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    margin: 5em 0 3em;
+}
+/**
+标签带框
+ */
+.tag-cloud-list a {
+    width: fit-content;
+    font-size: 1.2em !important;
+    padding: 0.2em 0.5em;
+    background: #fff;
+    margin: 0.5em 0.5em;
+    border-radius: 12px;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    border: 1.5px solid #e3e8f7;
+    box-shadow: 0 8px 16px -4px #2c2d300c !important;
+    align-items: center;
+    font-size: 18px !important;
+}
+.tag-cloud-list.is-center {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    margin: 5em 0 3em;
+}
+/**
+关于页面
+ */
+.post-reward .reward-button {
+    display: inline-block;
+    padding: 4px 24px;
+    background: var(--btn-bg);
+    color: var(--btn-color);
+    cursor: pointer;
+}
+.post-reward:hover .reward-button {
+    background: var(--btn-hover-color);
+}
+.post-reward:hover .reward-button>.reward-main {
+    display: block;
+}
+.post-reward .reward-main {
+    position: absolute;
+    bottom: 40px;
+    left: -23%;
+    z-index: 100;
+    display: none;
+    padding: 0 0 15px;
+}
+.post-reward .reward-main .reward-all {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: box;
+    display: flex;
+    margin: 0;
+    padding: 20px 10px;
+    border-radius: 4px;
+    background: var(--reward-pop);
+}
+.post-reward .reward-main .reward-all:before {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    content: '';
+}
+.post-reward .reward-main .reward-all:after {
+    position: absolute;
+    right: 0;
+    bottom: 2px;
+    left: 0;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-top: 13px solid var(--reward-pop);
+    border-right: 13px solid transparent;
+    border-left: 13px solid transparent;
+    content: '';
+}
+.post-reward .reward-main .reward-all .reward-item {
+    display: inline-block;
+    padding: 0 8px;
+    list-style-type: none;
+    vertical-align: top;
+}
+.post-reward .reward-main .reward-all .reward-item img {
+    width: 130px;
+    height: 130px;
+}
+.post-reward .reward-main .reward-all .reward-item .post-qr-code-desc {
+    width: 130px;
+    color: #858585;
+}
+.author-content-item.single.reward .reward-list-updateDate {
+    color: var(--icat-gray);
+    font-size: 14px;
+}
+#console.reward-show,#console.show {
+    opacity: 1;
+    pointer-events: all;
+}
+#console.reward-show .console-mask,#console.show .console-mask {
+    backdrop-filter: saturate(180%) blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+.about-reward {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+}
+.reward #con {
+    position: relative;
+    width: 350px;
+    height: 85px;
+    border-radius: 4px;
+}
+.reward #TA-con {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    width: 157px;
+    height: 50px;
+    border-radius: 4px;
+    background-color: #f25d8e;
+    box-shadow: 0 4px 4px rgba(255,112,159,.3);
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+.reward #text-con {
+    position: relative;
+    margin: 0 auto;
+    width: 100px;
+    height: 100%;
+}
+.reward #linght {
+    position: absolute;
+    top: 36%;
+    left: 4px;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 10px;
+    border-top: 10px solid #fff;
+    border-radius: 4px;
+    transform: rotate(-55deg);
+}
+.reward #linght::after {
+    position: absolute;
+    top: -13px;
+    left: -11px;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 10px;
+    border-top: 10px solid #fff;
+    border-radius: 4px;
+    content: "";
+    transform: rotate(180deg);
+}
+.reward #TA {
+    float: right;
+    color: #fff;
+    font-size: 15px;
+    line-height: 50px;
+}
+.reward #TA-con:hover {
+    background-color: #ff6b9a;
+}
+.reward #tube-con {
+    position: absolute;
+    top: 15px;
+    right: -5px;
+    width: 157px;
+    height: 55px;
+}
+.reward svg {
+    width: 100%;
+    height: 100%;
+}
+.reward #mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: all .5s;
+}
+.reward #mask svg {
+    width: 157px;
+    height: 55px;
+}
+.reward #TA-con:hover+#tube-con>#mask {
+    width: 157px;
+}
+.reward #TA-con:hover+#tube-con>#orange-mask {
+    animation: move1 .5s linear .2s infinite;
+}
+.reward #TA-con:hover+#tube-con>#orange-mask svg {
+    animation: movetwo .5s linear .2s infinite;
+}
+.reward #orange-mask {
+    position: absolute;
+    top: 0;
+    left: -15px;
+    overflow: hidden;
+    width: 18px;
+    height: 100%;
+}
+.reward #orange-mask svg {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    width: 157px;
+    height: 55px;
+}
+@keyframes move1 {
+    0% {
+        left: -15px;
+    }
+    100% {
+        left: 140px;
+    }
+}
+@keyframes movetwo {
+    0% {
+        left: 15px;
+    }
+    100% {
+        left: -140px;
+    }
+}
+.reward #people {
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    color: #aaa;
+    font-size: 12px;
+    font-family: "雅黑";
+}
+.reward #people>b {
+    color: #777;
+}
+
+@media screen and (min-width:768px) and (max-width:896px) {
+    .author-content-item.like-music .content-bottom .tips {
+        display: none;
+    }
+}
+@media screen and (max-width:768px) {
+    .post-reward {
+        display: none;
+    }
+    .layout>div:first-child:not(.recent-posts) {
+        padding: 1rem 1rem!important;
+        box-shadow: none!important;
+    }
+    #selfInfo-content-year {
+        width: 90px;
+    }
+    .console-card-group-reward .reward-all .reward-item img {
+        width: 130px;
+        height: 130px;
+    }
+    .reward .about-reward #con {
+        width: 170px;
+    }
+    .reward #tube-con {
+        display: none;
+    }
+}
+/* 响应式 */
+
+/* 打赏充电样式 */
 /*----------------------------- 页脚样式 -----------------------------------*/
 
 /* tzy页脚样式 begin   */

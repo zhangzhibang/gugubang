@@ -13,6 +13,24 @@ span#subtitle {
 a#site-name {
     font-family:arzhu!important
 }
+/*
+文章内容字体
+ */
+body{
+    font-family:arzhu!important
+}
+/**
+菜单和首页字体
+ */
+div#menus {
+    font-family:arzhu!important
+}
+a.article-title,
+a.blog-slider__title,
+a.categoryBar-list-link,
+h1.post-title {
+    font-family:arzhu!important
+}
 /**
 页脚颜色
  */
